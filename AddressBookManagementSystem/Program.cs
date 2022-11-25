@@ -10,9 +10,9 @@ namespace AddressBookManagementSystem
     {
         public static void Main(string[] args)
         {
-            //UC2
+            //UC3
             //Console.WriteLine("Welcome To Address Book Problem");
-            //NewPerson user = new NewPerson();
+            //Edit edit = new Edit();
             //while (true)
             //{
             //    Console.WriteLine("Please enter a command: ");
@@ -21,20 +21,24 @@ namespace AddressBookManagementSystem
 
             //    if (command == "add")
             //    {
-            //        NewPerson.AddPerson();
+            //        Edit.AddPerson();
             //    }
             //    if (command == "view")
             //    {
-            //        NewPerson.listPerson();
+            //        Edit.listPerson();
+            //    }
+            //    if (command == "edit")
+            //    {
+            //        Edit.EditPerson();
             //    }
             //    if (command == "UniqueBookName")
             //    {
-            //        user.NewUser();
+            //        edit.NewUser();
             //    }
 
             //    if (command == "ViewDictionary")
             //    {
-            //        user.Display();
+            //        edit.Display();
             //    }
             //}
         }
