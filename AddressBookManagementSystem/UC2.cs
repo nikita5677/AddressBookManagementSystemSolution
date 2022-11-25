@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace AddressBookManagementSystem
 {
-    //created a person class
-    class Person
+    //created a newperson class
+    class NewPerson
     {
+
         Dictionary<string, Contact> dictionary = new Dictionary<string, Contact>();
         public static List<Contact> contacts = new List<Contact>();
         // created a contact class
@@ -27,7 +28,7 @@ namespace AddressBookManagementSystem
         {
             Contact contact = new Contact();
 
-            Console.Write("Enter First Name: ");  
+            Console.Write("Enter First Name: ");
             contact.Firstname = Console.ReadLine();
 
             Console.Write("Enter Last Name: ");
@@ -65,6 +66,42 @@ namespace AddressBookManagementSystem
 
             }
         }
+        // created for a new user
+        public Dictionary<string, Contact> NewUser()
+        {
+            Console.WriteLine("Enter the Bookname: ");
+            string Bookname = Console.ReadLine();
+
+            Contact contact = new Contact();
+
+            Console.Write("Enter First Name: ");
+            contact.Firstname = Console.ReadLine();
+
+            Console.Write("Enter Last Name: ");
+            contact.Lastname = Console.ReadLine();
+
+            Console.Write("enter the Phone number: ");
+            contact.Phonenumber = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the city: ");
+            contact.City = Console.ReadLine();
+
+            Console.Write("Enter the zipcode: ");
+            contact.Zipcode = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the state: ");
+            contact.State = (Console.ReadLine());
+
+            Console.Write("Enter the email: ");
+            contact.Zipcode = int.Parse(Console.ReadLine());
+
+
+            contacts.Add(contact);
+            dictionary.Add(Bookname, contact);
+
+            return null;
+        }
+
         // craeted an another method for display the data
         public void Display()
         {
