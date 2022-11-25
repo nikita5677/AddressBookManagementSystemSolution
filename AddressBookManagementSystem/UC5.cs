@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AddressBookManagementSystem
 {
-    class Name
+    //created a class person
+    class MultiplePerson
     {
 
         Dictionary<string, Contact> dictionary = new Dictionary<string, Contact>();
@@ -83,11 +84,12 @@ namespace AddressBookManagementSystem
                         data.Zipcode = Convert.ToInt32(Console.ReadLine());
 
                         Console.Write("Enter the city: ");
-                        data.City = Console.ReadLine();
+                        data.City = (Console.ReadLine());
                     }
                 }
             }
         }
+
         // created a method for delete the contact
         public static void DeleteContact()
         {
@@ -102,7 +104,18 @@ namespace AddressBookManagementSystem
                 }
             }
         }
-        // created for a new contact user
+        // created a method  for multiple contacts
+        public static void MultipleContacts()
+        {
+            Console.WriteLine("Enter The Number of Contacts To Add");
+            int A = Convert.ToInt32(Console.ReadLine());
+            while (A > 0)
+            {
+                AddPerson();
+                A--;
+            }
+        }
+        // created for an a new contact user
         public Dictionary<string, Contact> NewUser()
         {
             Console.WriteLine("Enter the Bookname: ");
@@ -131,12 +144,12 @@ namespace AddressBookManagementSystem
             Console.Write("Enter the email: ");
             contact.Email = (Console.ReadLine());
 
-
             contacts.Add(contact);
             dictionary.Add(Bookname, contact);
 
             return null;
         }
+
         // craeted an another method for display the data
         public void Display()
         {
